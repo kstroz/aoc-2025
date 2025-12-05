@@ -51,5 +51,14 @@ export default function day05() {
     return prvs;
   }, 0);
 
+  const freshIdsInRanges = merged.reduce((prvs, curr) => {
+    const diff = curr[1] - curr[0];
+
+    return prvs + diff + 1;
+  }, 0);
+
   console.log(`There are ${freshIds} fresh ingredients`);
+  console.log(
+    `There are ${freshIdsInRanges} fresh ingredients according to the fresh ingredient ID ranges`
+  );
 }
